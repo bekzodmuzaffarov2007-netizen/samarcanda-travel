@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Samarcanda Travel — discover Uzbekistan beyond the ordinary." />
+  <title>Samarcanda — Discover Uzbekistan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#18221d;--muted:#66736b;--paper:#f8f7f2;--card:#fff;--line:#e7e6df;--accent:#b66a3c;--green:#23483c;--cream:#eee9dc}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:var(--paper);color:var(--ink);line-height:1.5}
+    a{text-decoration:none;color:inherit}
+    .nav{position:absolute;z-index:10;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:24px 6vw;color:white}
+    .brand{font-size:25px;font-weight:700;letter-spacing:-1px}.brand span{font-weight:400;opacity:.75}
+    .navlinks{display:flex;gap:28px;font-size:14px}.navlinks a{opacity:.9}.navlinks a:hover{opacity:1}
+    .navbtn{padding:11px 18px;border:1px solid rgba(255,255,255,.55);border-radius:99px;font-size:13px}
+    .hero{min-height:92vh;display:grid;place-items:center;position:relative;overflow:hidden;color:white;background:linear-gradient(90deg,rgba(16,31,26,.78),rgba(16,31,26,.2)),url('https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=2200&q=85') center/cover}
+    .hero:after{content:'';position:absolute;inset:auto 0 0;height:180px;background:linear-gradient(transparent,var(--paper));pointer-events:none}
+    .hero-inner{width:min(1100px,88%);padding-top:80px;position:relative;z-index:2}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:3px;opacity:.8;margin-bottom:20px}
+    h1{font-family:'Playfair Display',serif;font-size:clamp(58px,9vw,118px);line-height:.9;letter-spacing:-5px;max-width:850px}
+    .hero-copy{font-size:18px;max-width:510px;margin:28px 0 34px;color:rgba(255,255,255,.87)}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}.btn{padding:14px 22px;border-radius:99px;font-weight:600;font-size:14px;display:inline-flex;align-items:center;gap:8px}.btn.primary{background:white;color:var(--green)}.btn.ghost{border:1px solid rgba(255,255,255,.5);color:white}
+    .scroll{position:absolute;bottom:38px;right:6vw;z-index:3;font-size:12px;letter-spacing:2px;text-transform:uppercase;writing-mode:vertical-rl;opacity:.7}
+    section{padding:110px 6vw}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:42px}.kicker{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:var(--accent);font-weight:700;margin-bottom:10px}.section-title{font-family:'Playfair Display',serif;font-size:clamp(38px,5vw,64px);line-height:1}.section-intro{max-width:430px;color:var(--muted);font-size:16px}
+    .destinations{display:grid;grid-template-columns:1.25fr .9fr .9fr;gap:18px}.place{height:470px;border-radius:24px;overflow:hidden;position:relative;color:white;background-size:cover;background-position:center;display:flex;align-items:end;padding:26px}.place:after{content:'';position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.72))}.place>div{position:relative;z-index:1}.place h3{font-family:'Playfair Display',serif;font-size:35px}.place p{opacity:.8;font-size:13px}.place.sam{background-image:url('https://images.unsplash.com/photo-1596276020587-8044fe049813?auto=format&fit=crop&w=1200&q=85')}.place.buk{background-image:url('https://images.unsplash.com/photo-1580674684081-7617fbf3d745?auto=format&fit=crop&w=1000&q=85')}.place.kh{background-image:url('https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1000&q=85')}
+    .tours{background:var(--green);color:white}.tours .section-intro{color:rgba(255,255,255,.65)}.tour-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.tour{background:#fff;color:var(--ink);border-radius:22px;overflow:hidden}.tour-img{height:230px;background-size:cover;background-position:center}.tour:nth-child(1) .tour-img{background-image:url('https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=1000&q=85')}.tour:nth-child(2) .tour-img{background-image:url('https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=1000&q=85')}.tour:nth-child(3) .tour-img{background-image:url('https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?auto=format&fit=crop&w=1000&q=85')}.tour-body{padding:23px}.tour-tag{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:var(--accent);font-weight:700}.tour h3{font-family:'Playfair Display',serif;font-size:27px;margin:8px 0}.tour p{color:var(--muted);font-size:14px}.tour-meta{display:flex;justify-content:space-between;border-top:1px solid var(--line);margin-top:20px;padding-top:15px;font-size:13px;font-weight:600}
+    .story{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.story-img{height:570px;border-radius:28px;background:url('https://images.unsplash.com/photo-1609766857041-ed402ea8069a?auto=format&fit=crop&w=1300&q=85') center/cover}.story-copy p{color:var(--muted);font-size:17px;margin:24px 0;max-width:530px}.stats{display:flex;gap:38px;margin-top:38px}.stat strong{display:block;font-family:'Playfair Display',serif;font-size:34px}.stat span{font-size:12px;color:var(--muted)}
+    .cta{padding:100px 6vw}.cta-box{border-radius:30px;background:var(--cream);padding:75px;display:flex;justify-content:space-between;align-items:center;gap:40px}.cta-box h2{font-family:'Playfair Display',serif;font-size:clamp(40px,5vw,65px);line-height:1;max-width:620px}.darkbtn{background:var(--green);color:white;padding:15px 23px;border-radius:99px;font-weight:600;white-space:nowrap}
+    footer{padding:35px 6vw 45px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:13px}.footer-brand{font-weight:700;color:var(--ink);font-size:18px}
+    @media(max-width:800px){.navlinks{display:none}.hero{min-height:88vh}.destinations,.tour-grid,.story{grid-template-columns:1fr}.place{height:390px}.story-img{height:420px}.cta-box{padding:45px 30px;display:block}.cta-box .darkbtn{display:inline-block;margin-top:25px}.section-head{display:block}.section-intro{margin-top:18px}.stats{gap:25px}footer{display:block}footer>*+*{margin-top:10px}}
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <a class="brand" href="#top">Samarcanda<span> travel</span></a>
+    <div class="navlinks"><a href="#places">Destinations</a><a href="#tours">Tours</a><a href="#story">Our story</a></div>
+    <a class="navbtn" href="https://t.me/" target="_blank">Plan a trip →</a>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="hero-inner">
+      <div class="eyebrow">Uzbekistan · Central Asia</div>
+      <h1>Discover Uzbekistan beyond the ordinary.</h1>
+      <p class="hero-copy">Ancient cities, mountain mornings, warm tables and stories worth carrying home. We make Uzbekistan feel personal.</p>
+      <div class="actions"><a class="btn primary" href="#tours">Explore our tours ↓</a><a class="btn ghost" href="#story">Why Samarcanda?</a></div>
+    </div>
+    <div class="scroll">Scroll to explore</div>
+  </header>
+
+  <section id="places">
+    <div class="section-head"><div><div class="kicker">Where we go</div><h2 class="section-title">Three cities.<br>Endless stories.</h2></div><p class="section-intro">Start with the Silk Road classics, then let us take you somewhere most itineraries never reach.</p></div>
+    <div class="destinations">
+      <a class="place sam" href="#tours"><div><h3>Samarkand</h3><p>The blue jewel of the Silk Road</p></div></a>
+      <a class="place buk" href="#tours"><div><h3>Bukhara</h3><p>Where history still lives</p></div></a>
+      <a class="place kh" href="#tours"><div><h3>Khiva</h3><p>A city behind ancient walls</p></div></a>
+    </div>
+  </section>
+
+  <section class="tours" id="tours">
+    <div class="section-head"><div><div class="kicker">Curated journeys</div><h2 class="section-title">Go further.</h2></div><p class="section-intro">Small groups, local people, flexible plans and the places you won't find in a generic package.</p></div>
+    <div class="tour-grid">
+      <article class="tour"><div class="tour-img"></div><div class="tour-body"><div class="tour-tag">Classic · 6 days</div><h3>Silk Road Essentials</h3><p>Samarkand → Bukhara → Khiva, with the right amount of history and wandering.</p><div class="tour-meta"><span>From $399</span><span>→</span></div></div></article>
+      <article class="tour"><div class="tour-img"></div><div class="tour-body"><div class="tour-tag">Adventure · 4 days</div><h3>Mountains & Villages</h3><p>Escape the cities for fresh air, mountain trails, village food and quiet nights.</p><div class="tour-meta"><span>From $249</span><span>→</span></div></div></article>
+      <article class="tour"><div class="tour-img"></div><div class="tour-body"><div class="tour-tag">Custom · Your pace</div><h3>Your Uzbekistan</h3><p>Tell us your dates, budget and interests. We'll build the route around you.</p><div class="tour-meta"><span>Let's plan</span><span>→</span></div></div></article>
+    </div>
+  </section>
+
+  <section id="story">
+    <div class="story"><div class="story-img"></div><div class="story-copy"><div class="kicker">The Samarcanda way</div><h2 class="section-title">Not just a trip.<br>A memory with roots.</h2><p>We are building a new kind of travel company from Uzbekistan: local enough to know the hidden corners, modern enough to make the journey effortless.</p><p>From the first message to the last cup of tea, our goal is simple — make you feel like you discovered something, not just visited it.</p><div class="stats"><div class="stat"><strong>100%</strong><span>Local perspective</span></div><div class="stat"><strong>24/7</strong><span>Human support</span></div><div class="stat"><strong>∞</strong><span>Ways to explore</span></div></div></div></div>
+  </section>
+
+  <div class="cta"><div class="cta-box"><h2>Ready to see Uzbekistan differently?</h2><a class="darkbtn" href="https://t.me/" target="_blank">Talk to Samarcanda →</a></div></div>
+
+  <footer><div class="footer-brand">Samarcanda</div><div>Samarkand · Tashkent · Uzbekistan</div><div>© 2026 Samarcanda Travel</div></footer>
+</body>
+</html>
