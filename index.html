@@ -18,9 +18,39 @@ section{padding:92px 6%}.section-head{max-width:1250px;margin:auto}.section-head
 .cta{background:var(--dark);color:#fff;padding:100px 7%}.cta-inner{max-width:1250px;margin:auto}.cta h2{font-family:"Playfair Display",Georgia,serif;font-size:clamp(48px,7vw,88px);line-height:.95;margin:12px 0}.cta p{color:#d9c8b5;max-width:600px;line-height:1.6}.socials{margin-top:28px;display:flex;gap:10px;flex-wrap:wrap}.socials a{border:1px solid #ffffff22;padding:12px 16px;border-radius:999px}.footer{padding:25px 6%;background:#140c07;color:#b9a898;display:flex;justify-content:space-between;gap:20px;font-size:12px}
 .request-modal{position:fixed;inset:0;z-index:9999;display:none;place-items:center;padding:18px;background:#120b08cc;backdrop-filter:blur(12px)}.request-modal.open{display:grid}.request-box{width:min(720px,100%);max-height:92vh;overflow:auto;background:#fffdf9;color:#2b2119;border-radius:28px;box-shadow:0 30px 100px #0008;padding:28px}.request-head{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}.request-head h3{font:700 34px/1 "Playfair Display",Georgia,serif;margin:5px 0 8px}.request-head p{color:#786d61;margin:0;line-height:1.5}.request-close{border:0;background:#f3e8d8;width:40px;height:40px;border-radius:50%;font-size:20px;cursor:pointer}.request-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:24px 0 18px}.request-tabs button{border:1px solid #eadcc9;background:#fff;padding:11px;border-radius:13px;font-weight:700;cursor:pointer}.request-tabs button.active{background:#d9822b;color:#fff;border-color:#d9822b}.request-form{display:grid;grid-template-columns:1fr 1fr;gap:12px}.request-form label{font-size:12px;font-weight:700;color:#6f6256}.request-form label.full{grid-column:1/-1}.request-form input,.request-form select,.request-form textarea{width:100%;margin-top:6px;border:1px solid #eadcc9;background:#fff;padding:12px;border-radius:12px;font:inherit;outline:none}.request-form textarea{min-height:90px;resize:vertical}.request-contact{margin-top:16px;padding:15px;border:1px solid #eadcc9;border-radius:16px;background:#fff8ec}.request-contact strong{display:block;margin-bottom:10px}.contact-options{display:flex;gap:8px;flex-wrap:wrap}.contact-options label{display:flex;align-items:center;gap:7px;padding:9px 12px;background:#fff;border:1px solid #eadcc9;border-radius:999px;cursor:pointer}.request-submit{margin-top:18px;width:100%;border:0;background:#21150c;color:#fff;padding:15px;border-radius:999px;font-weight:700;cursor:pointer}.request-submit:disabled{opacity:.6}.request-message{margin-top:10px;font-size:13px;line-height:1.4}.request-success{padding:18px;border-radius:16px;background:#edf7ec;margin-top:15px}.request-success b{display:block;margin-bottom:5px}
 @media(max-width:850px){.nav{display:none}.hero{padding-top:145px;min-height:90vh}.tour-grid,.story-grid{grid-template-columns:1fr}.map{height:600px}.map-panel{top:auto;bottom:70px;left:12px;right:12px;width:auto}.map-search{right:12px;width:auto}.bullets{grid-template-columns:1fr}.footer{display:block}.footer div+div{margin-top:8px}}@media(max-width:620px){.request-form{grid-template-columns:1fr}.request-form label.full{grid-column:auto}.request-tabs{grid-template-columns:1fr}.request-box{padding:20px}}
+
+/* Samarcanda theme + inquiry enhancements */
+:root{--bg-main:#fff8ec;--paper:#fffdf9;--ink:#2b2119;--muted:#786d61;--line:#eadcc9}
+:root[data-theme="dark"]{--cream:#17110c;--paper:#21170f;--ink:#f5ecdf;--muted:#b8a898;--line:#403226;--deep:#f5ecdf;--bg-main:#17110c}
+.theme-toggle{width:40px;height:40px;border-radius:50%;border:1px solid #ffffff45;background:#ffffff12;color:#fff;cursor:pointer;font-size:17px;display:grid;place-items:center}
+body{background:var(--cream);color:var(--ink)}
+.tours{background:var(--paper)}
+.tour{background:var(--paper);border-color:var(--line)}
+.tour h3,.tour-list li,.section-head p{color:var(--ink)}
+.tour p,.tour .meta{color:var(--muted)}
+.story{background:color-mix(in srgb,var(--cream) 88%,#d9822b 12%)}
+.story-card{background:var(--paper);border-color:var(--line)}
+.story-card p{color:var(--muted)}
+.bullets div{background:color-mix(in srgb,var(--paper) 92%,#d9822b 8%);border-color:var(--line);color:var(--ink)}
+.request-box{background:var(--paper);color:var(--ink)}
+.request-head p,.request-form label{color:var(--muted)}
+.request-close{background:color-mix(in srgb,var(--paper) 85%,#d9822b 15%);color:var(--ink)}
+.request-tabs button,.request-form input,.request-form select,.request-form textarea,.contact-options label{background:var(--paper);color:var(--ink);border-color:var(--line)}
+.request-contact{background:color-mix(in srgb,var(--paper) 90%,#d9822b 10%);border-color:var(--line)}
+.tour-media{height:185px;border-radius:18px;margin:-8px -8px 10px;overflow:hidden;background-size:cover;background-position:center;position:relative}
+.tour-media:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 48%,#0007)}
+.tour-media span{position:absolute;z-index:1;left:14px;bottom:12px;color:#fff;font:600 12px "DM Sans",sans-serif;letter-spacing:.04em}
+.tour-summary{margin:18px 0;padding:18px;border:1px solid var(--line);border-radius:18px;background:color-mix(in srgb,var(--paper) 90%,#d9822b 10%)}
+.tour-summary h4{font:700 26px/1.1 "Playfair Display",Georgia,serif;margin:0 0 7px}
+.tour-summary p{margin:5px 0;color:var(--muted);line-height:1.5}
+.tour-summary ul{margin:10px 0 0;padding-left:18px;color:var(--muted);font-size:13px}
+.tour-summary .remove-tour{float:right;border:0;background:none;color:var(--muted);font-size:23px;cursor:pointer}
+.request-modal.just-ask .request-form label[data-trip-field],.request-modal.just-ask .request-contact{display:none}
+@media(max-width:620px){.tour-media{height:165px}}
+
 </style></head>
 <body>
-<header class="top"><a class="brand" href="#"><span class="mark">S</span><span>Samarcanda</span></a><nav class="nav"><a href="#tours">Tours</a><a href="#map">Explore</a><a href="#story">Why us</a><a href="#contact">Contact</a></nav></header>
+<header class="top"><a class="brand" href="#"><span class="mark">S</span><span>Samarcanda</span></a><nav class="nav"><a href="#tours">Tours</a><a href="#map">Explore</a><a href="#story">Why us</a><a href="#contact">Contact</a><button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch theme">☾</button></nav></header>
 <main>
 <section class="hero"><div class="eyebrow">SAMARCANDA · UZBEKISTAN · WORLDWIDE</div><h1>Journeys,<br><em>not packages.</em></h1><p>We build thoughtful trips around people — from the Silk Road of Uzbekistan to cities, mountains, villages and hidden corners beyond it.</p><div class="actions"><button class="btn request-open" data-type="inquiry" data-tour="">Plan your journey →</button><a class="btn alt" href="#tours">See our journeys</a></div><div class="hero-note"><div><b>01</b>Tell us the idea</div><div><b>02</b>We shape the route</div><div><b>03</b>You travel</div></div></section>
 <section class="tours" id="tours">
@@ -34,17 +64,27 @@ section{padding:92px 6%}.section-head{max-width:1250px;margin:auto}.section-head
 <section class="cta" id="contact"><div class="cta-inner"><div class="eyebrow">YOUR NEXT JOURNEY</div><h2>Give us a place.<br>We'll find the story.</h2><p>Start with a destination, a rough budget, or even just a feeling. Send the request directly through our website and choose how you want us to contact you.</p><div class="actions"><button class="btn request-open" data-type="inquiry" data-tour="">Start an enquiry →</button><a class="btn alt" href="mailto:business@samarcandatravel.com">Business enquiries</a></div><div class="socials"><a href="https://instagram.com/samarcanda_voyage">Instagram</a><a href="https://www.facebook.com/">Facebook</a><a href="https://www.tiktok.com/">TikTok</a><a href="https://www.youtube.com/">YouTube</a></div></div></section>
 <div class="request-modal" id="requestModal" aria-hidden="true"><div class="request-box" role="dialog" aria-modal="true" aria-labelledby="requestTitle">
 <div class="request-head"><div><div class="eyebrow">SAMARCANDA PLANNER</div><h3 id="requestTitle">Let's shape your journey.</h3><p id="requestIntro">Book a journey, build your own, or simply ask us a question.</p></div><button class="request-close" id="requestClose" aria-label="Close">×</button></div>
-<div class="request-tabs"><button data-request="booking" class="active">Book this tour</button><button data-request="custom_trip">Make my own trip</button><button data-request="inquiry">Just ask us</button></div>
+<div class="request-tabs"><button data-request="booking" class="active">Book this tour</button><button data-request="custom_trip">Make my own trip</button><button data-request="inquiry">Just ask us</button></div><div id="tourSummary" class="tour-summary" style="display:none"></div>
 <form id="requestForm" class="request-form">
 <label>Full name<input name="name" required placeholder="Your name"></label><label>Email<input name="email" type="email" placeholder="you@example.com"></label>
 <label>Destination<input name="destination" id="requestDestination" placeholder="Where do you want to go?"></label><label>Travellers<input name="travelers" type="number" min="1" value="2"></label>
-<label>Start date<input name="start_date" type="date"></label><label>End date<input name="end_date" type="date"></label>
-<label>Budget / person<input name="budget" placeholder="e.g. $800"></label><label>Travel style<select name="travel_style"><option value="">Choose one</option><option>Culture & history</option><option>Nature & adventure</option><option>Food & local life</option><option>Family</option><option>Private & flexible</option><option>Mixed</option></select></label>
+<label data-trip-field>Start date<input name="start_date" type="date"></label><label data-trip-field>End date<input name="end_date" type="date"></label>
+<label data-trip-field>Budget / person<input name="budget" placeholder="e.g. $800"></label><label data-trip-field>Travel style<select name="travel_style"><option value="">Choose one</option><option>Culture & history</option><option>Nature & adventure</option><option>Food & local life</option><option>Family</option><option>Private & flexible</option><option>Mixed</option></select></label>
 <label class="full">Tell us more<textarea name="notes" placeholder="What would make this trip special?"></textarea></label>
 <div class="request-contact full"><strong>How should we contact you?</strong><div class="contact-options"><label><input type="radio" name="contact_method" value="email" checked> Email</label><label><input type="radio" name="contact_method" value="whatsapp"> WhatsApp</label><label><input type="radio" name="contact_method" value="telegram"> Telegram</label><label><input type="radio" name="contact_method" value="phone"> Phone</label></div><input name="phone" placeholder="Phone / WhatsApp / Telegram username (optional)"></div>
 <button class="request-submit full" type="submit">Send my request →</button><div id="requestMessage" class="request-message full"></div></form></div></div>
 <footer class="footer"><div>© 2026 Samarcanda Travel</div><div>Uzbekistan · Central Asia · Worldwide</div></footer>
 </main>
+<script>
+(function(){
+  const saved=localStorage.getItem('samarcanda-theme');
+  const theme=saved||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+  document.documentElement.dataset.theme=theme;
+  const btn=document.getElementById('themeToggle');
+  function sync(){const dark=document.documentElement.dataset.theme==='dark';btn.textContent=dark?'☀':'☾';btn.setAttribute('aria-label',dark?'Switch to light theme':'Switch to dark theme')}
+  btn.addEventListener('click',()=>{const next=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=next;localStorage.setItem('samarcanda-theme',next);sync()});sync();
+})();
+</script>
 <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
 <script>
 const placeName=document.getElementById('placeName'),placeText=document.getElementById('placeText'),destination=document.getElementById('destination');
@@ -62,41 +102,52 @@ document.getElementById('searchBtn').onclick=searchPlace;document.getElementById
 </script>
 <script>
 async function loadTourCatalogue(){
-  const grid=document.getElementById('tourGrid');
-  if(!grid)return;
+  const grid=document.getElementById('tourGrid'); if(!grid)return;
   try{
-    const r=await fetch(SB_URL+'/rest/v1/tours?select=title,slug,duration_days,city,travel_style,short_description,description,itinerary,price_from,currency,is_published&is_published=eq.true&order=created_at.asc',{headers:{apikey:SB_KEY,Authorization:'Bearer '+SB_KEY}});
+    const r=await fetch(SB_URL+'/rest/v1/tours?select=title,slug,country,city,duration_days,travel_style,short_description,description,itinerary,included,price_from,currency,is_published&is_published=eq.true&order=created_at.asc',{headers:{apikey:SB_KEY,Authorization:'Bearer '+SB_KEY}});
     if(!r.ok)throw new Error('Tour catalogue unavailable');
     const tours=await r.json();
-    const icons=['🏛','🏔','🧳','🧵','🌅'];
+    const art=['city','mountain','food','silk','desert'];
     grid.innerHTML=tours.map((t,i)=>{
-      const route=(t.city||'Uzbekistan').split(' · ').slice(0,4).join(' · ');
+      const route=(t.city||'Uzbekistan');
+      const styles=(t.travel_style||[]).slice(0,3).join(' · ');
       const highlights=(t.itinerary||[]).slice(0,3).map(d=>d.title).join(' · ');
-      const price=t.price_from?('From '+t.price_from+' '+(t.currency||'USD')):'Quote based on dates & group size';
+      const price=t.price_from?('From '+t.price_from+' '+(t.currency||'USD')):'Price confirmed with enquiry';
       return '<article class="tour">'+
-        '<span class="tag">'+icons[i%icons.length]+' · '+String(t.duration_days)+' DAYS · UZBEKISTAN</span>'+
+        '<div class="tour-media" style="background-image:url("'+tourArt(art[i%art.length],t.title)+'")"><span>'+escHtml(route)+'</span></div>'+
+        '<span class="tag">✦ · '+String(t.duration_days)+' DAYS · '+escHtml(t.country||'UZBEKISTAN')+'</span>'+
         '<h3>'+escHtml(t.title)+'</h3>'+
         '<p>'+escHtml(t.short_description||t.description||'A curated Uzbekistan journey.')+'</p>'+
-        '<ul class="tour-list"><li>'+escHtml(route)+'</li><li>'+escHtml((t.travel_style||[]).slice(0,3).join(' · '))+'</li><li>'+escHtml(highlights||'Local experiences and flexible route planning')+'</li></ul>'+
+        '<ul class="tour-list"><li>'+escHtml(styles||'Flexible private travel')+'</li><li>'+escHtml(highlights||'Local experiences and living history')+'</li></ul>'+
         '<div class="meta">'+escHtml(price)+'</div>'+
-        '<div class="tour-actions"><button class="mini-btn primary request-open" data-tour="'+escAttr(t.title)+'" data-type="booking">Plan this tour →</button><button class="mini-btn" data-tour-details="'+escAttr(t.title)+'">View route</button></div>'+
+        '<div class="tour-actions"><button class="mini-btn primary book-tour" data-tour-slug="'+escAttr(t.slug)+'">Book this tour →</button><button class="mini-btn details-tour" data-tour-slug="'+escAttr(t.slug)+'">View route</button></div>'+
       '</article>';
     }).join('');
-    grid.querySelectorAll('.request-open').forEach(b=>b.addEventListener('click',()=>openRequest(b.dataset.type,b.dataset.tour)));
-    grid.querySelectorAll('[data-tour-details]').forEach(b=>b.addEventListener('click',()=>{
-      const t=tours.find(x=>x.title===b.dataset.tourDetails);
-      if(!t)return;
-      const days=(t.itinerary||[]).map(d=>'<li><b>'+escHtml(d.title)+'</b>: '+escHtml((d.highlights||[]).join(', '))+'</li>').join('');
-      placeName.textContent=t.title;
-      placeText.innerHTML=escHtml(t.description||t.short_description||'');
-      destination.innerHTML='<b>'+escHtml(t.title)+'</b> — '+escHtml(t.duration_days)+' days · '+escHtml(t.city||'Uzbekistan')+' <a class="destination-cta" href="#" id="tourPlanInline">Plan this tour →</a>';
-      const inline=document.getElementById('tourPlanInline');
-      if(inline)inline.onclick=e=>{e.preventDefault();openRequest('booking',t.title)};
-      document.getElementById('map').scrollIntoView({behavior:'smooth',block:'center'});
-    }));
+    grid.querySelectorAll('.book-tour').forEach(b=>b.addEventListener('click',()=>{const t=tours.find(x=>x.slug===b.dataset.tourSlug);if(t)openRequest('booking',t)}));
+    grid.querySelectorAll('.details-tour').forEach(b=>b.addEventListener('click',()=>{const t=tours.find(x=>x.slug===b.dataset.tourSlug);if(!t)return;showTourDetails(t)}));
   }catch(e){
+    console.error(e);
     grid.innerHTML='<article class="tour"><span class="tag">UZBEKISTAN</span><h3>Our tours are loading.</h3><p>Please refresh the page or start an enquiry and we will build the route with you.</p></article>';
   }
+}
+function tourArt(type,title){
+  const palettes={city:['#f0dfc6','#a95e24','#234a59'],mountain:['#dbe4df','#587b79','#c7833e'],food:['#f3dfc2','#b45c28','#8d3f20'],silk:['#ead8bf','#9b6232','#435b55'],desert:['#f2d5a3','#b96a2b','#5e4835']};
+  const p=palettes[type]||palettes.city;
+  let shapes= type==='mountain' ? '<path d="M0 220L105 65l68 92 61-73 106 136H0z" fill="'+p[2]+'"/><path d="M65 125l40-60 40 61-25-14-15 19z" fill="#fff8ec"/><path d="M0 250Q95 175 190 230T340 205v45H0z" fill="'+p[1]+'"/>' :
+    type==='desert' ? '<circle cx="274" cy="62" r="28" fill="#f1b24a"/><path d="M0 205Q90 145 175 205T340 190v60H0z" fill="'+p[1]+'"/><path d="M145 205q0-48 45-48t45 48v28h-90z" fill="'+p[2]+'"/><path d="M158 199h64M162 185h56" stroke="#f6ead8" stroke-width="6"/>' :
+    type==='food' ? '<circle cx="170" cy="150" r="75" fill="'+p[1]+'"/><circle cx="170" cy="150" r="54" fill="#e5b46e"/><circle cx="140" cy="130" r="7" fill="'+p[2]+'"/><circle cx="195" cy="150" r="8" fill="'+p[2]+'"/><circle cx="165" cy="177" r="7" fill="'+p[2]+'"/><path d="M45 82h28v145H45zM275 82h28v145h-28z" fill="'+p[2]+'"/>' :
+    type==='silk' ? '<path d="M0 230Q70 130 145 200T340 145v105H0z" fill="'+p[2]+'"/><path d="M0 250Q100 200 200 238T340 210v40H0z" fill="'+p[1]+'"/><path d="M130 105q40-65 80 0v70h-80z" fill="'+p[1]+'"/><path d="M140 120h60M140 140h60" stroke="'+p[0]+'" stroke-width="7"/>' :
+    '<rect x="65" y="105" width="88" height="115" rx="5" fill="'+p[1]+'"/><rect x="180" y="80" width="105" height="140" rx="5" fill="'+p[2]+'"/><path d="M65 105l44-43 44 43M180 80l52-48 53 48" fill="'+p[1]+'"/><circle cx="109" cy="145" r="12" fill="'+p[0]+'"/><circle cx="232" cy="120" r="12" fill="'+p[0]+'"/>';
+  const svg='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 250"><rect width="340" height="250" fill="'+p[0]+'"/>'+shapes+'<rect x="14" y="14" width="312" height="222" rx="16" fill="none" stroke="#d9822b" stroke-opacity=".4"/><text x="25" y="42" font-family="Georgia,serif" font-size="20" font-weight="700" fill="#21150c">SAMARCANDA</text></svg>';
+  return 'data:image/svg+xml;base64,'+btoa(unescape(encodeURIComponent(svg)));
+}
+function showTourDetails(t){
+  placeName.textContent=t.title;
+  placeText.textContent=t.description||t.short_description||'';
+  const highlights=(t.itinerary||[]).slice(0,4).map(d=>d.title).join(' · ');
+  destination.innerHTML='<b>'+escHtml(t.title)+'</b> — '+escHtml(String(t.duration_days))+' days · '+escHtml(t.city||'Uzbekistan')+' <a class="destination-cta" href="#" id="tourPlanInline">Book this tour →</a>';
+  const inline=document.getElementById('tourPlanInline'); if(inline)inline.onclick=e=>{e.preventDefault();openRequest('booking',t)};
+  document.getElementById('map').scrollIntoView({behavior:'smooth',block:'center'});
 }
 function escHtml(s){return String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
 function escAttr(s){return escHtml(s).replace(/'/g,'&#39;');}
@@ -104,10 +155,32 @@ function escAttr(s){return escHtml(s).replace(/'/g,'&#39;');}
 <script>
 const SB_URL='https://pygumynpgrpnvbhajjzj.supabase.co',SB_KEY='sb_publishable_fRkue0SOoeH6fEGnKRL52A_Z8PHM1lp';
 const modal=document.getElementById('requestModal'),form=document.getElementById('requestForm'),msg=document.getElementById('requestMessage'),reqDest=document.getElementById('requestDestination');let requestType='booking',selectedTour='';
-function openRequest(type='booking',tour=''){requestType=type;selectedTour=tour;modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.querySelectorAll('.request-tabs button').forEach(b=>b.classList.toggle('active',b.dataset.request===type));document.getElementById('requestTitle').textContent=type==='booking'?'Book your journey.':type==='custom_trip'?'Build your own journey.':'How can we help?';document.getElementById('requestIntro').textContent=type==='booking'?'Send the details and our team will confirm the route, price and availability.':type==='custom_trip'?'Choose the destination, dates and style — we will shape the itinerary with you.':'Ask anything about a destination, route, group trip or private journey.';if(tour)reqDest.value=tour;msg.textContent='';document.body.style.overflow='hidden'}
-function closeRequest(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow=''}
+function renderTourSummary(t){
+  const box=document.getElementById('tourSummary');
+  if(!t){box.style.display='none';box.innerHTML='';return}
+  const highlights=(t.itinerary||[]).slice(0,3).map(d=>d.title).join(', ');
+  const included=(t.included||[]).slice(0,5).join(', ');
+  const price=t.price_from?((t.currency||'USD')+' '+t.price_from+' / person'):'Confirmed with enquiry';
+  box.style.display='block';
+  box.innerHTML='<button class="remove-tour" id="removeTour" aria-label="Remove tour">×</button><h4>'+escHtml(t.title)+' · '+escHtml(String(t.duration_days))+' days</h4><p><b>Route:</b> '+escHtml(t.city||t.country||'Uzbekistan')+'</p><p><b>Starting price:</b> '+escHtml(price)+'</p><ul><li><b>Highlights:</b> '+escHtml(highlights||'Curated local experiences')+'</li><li><b>Includes:</b> '+escHtml(included||'Route planning and trip support')+'</li></ul>';
+  document.getElementById('removeTour').onclick=()=>openRequest('custom_trip','');
+}
+function openRequest(type='booking',tour=null){
+  requestType=type;
+  selectedTour=tour;
+  modal.classList.add('open');modal.setAttribute('aria-hidden','false');
+  modal.classList.toggle('just-ask',type==='inquiry');
+  document.querySelectorAll('.request-tabs button').forEach(b=>b.classList.toggle('active',b.dataset.request===type));
+  document.getElementById('requestTitle').textContent=type==='booking'?'Book this tour.':type==='custom_trip'?'Make my own trip.':'Just ask us.';
+  document.getElementById('requestIntro').textContent=type==='booking'?'Review the journey details, then send your dates and contact preference.':type==='custom_trip'?'Choose a destination and tell us what kind of journey you want.':'Ask anything about destinations, routes, groups or private travel.';
+  renderTourSummary(type==='booking'?tour:null);
+  if(tour){reqDest.value=tour.country||tour.city||'';form.querySelector('[name=notes]').value='I am interested in "'+tour.title+'" ('+tour.duration_days+' days). Route: '+(tour.city||'')+'. Highlights: '+((tour.itinerary||[]).slice(0,5).map(d=>d.title).join(', '))+'. Included: '+((tour.included||[]).join(', '))+'.';}
+  else if(type!=='booking'){reqDest.value=reqDest.value||'';if(type==='custom_trip')form.querySelector('[name=notes]').value=form.querySelector('[name=notes]').value||''}
+  msg.textContent='';document.body.style.overflow='hidden';
+}
+function closeRequest(){modal.classList.remove('open','just-ask');modal.setAttribute('aria-hidden','true');document.body.style.overflow='';}
 document.querySelectorAll('.request-open').forEach(b=>b.addEventListener('click',()=>openRequest(b.dataset.type,b.dataset.tour)));document.querySelectorAll('.request-tabs button').forEach(b=>b.addEventListener('click',()=>openRequest(b.dataset.request,selectedTour)));document.getElementById('requestClose').onclick=closeRequest;modal.addEventListener('click',e=>{if(e.target===modal)closeRequest()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeRequest()});
 loadTourCatalogue();
-form.addEventListener('submit',async e=>{e.preventDefault();const button=form.querySelector('.request-submit');button.disabled=true;button.textContent='Sending…';msg.textContent='';const fd=new FormData(form);const payload={request_type:requestType,tour_type:selectedTour||null,destination:fd.get('destination')||null,start_date:fd.get('start_date')||null,end_date:fd.get('end_date')||null,travelers:fd.get('travelers')?Number(fd.get('travelers')):null,budget:fd.get('budget')||null,travel_style:fd.get('travel_style')||null,name:fd.get('name'),email:fd.get('email')||null,phone:fd.get('phone')||null,contact_method:fd.get('contact_method'),notes:fd.get('notes')||null};try{const r=await fetch(SB_URL+'/rest/v1/trip_requests',{method:'POST',headers:{'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY,'Content-Type':'application/json','Prefer':'return=minimal'},body:JSON.stringify(payload)});if(!r.ok)throw new Error(await r.text());form.reset();reqDest.value=selectedTour||'';msg.innerHTML='<div class="request-success"><b>Request received ✓</b>We have your details. The Samarcanda team can now follow up using your chosen contact method.</div>';button.textContent='Request sent'}catch(err){console.error(err);msg.textContent='Something went wrong while sending. Please try again or use the enquiry form again.';button.disabled=false;button.textContent='Send my request →'}});
+form.addEventListener('submit',async e=>{e.preventDefault();const button=form.querySelector('.request-submit');button.disabled=true;button.textContent='Sending…';msg.textContent='';const fd=new FormData(form);const tourNotes=selectedTour&&requestType==='booking'?'\n\nTOUR DETAILS — '+selectedTour.title+' | '+selectedTour.duration_days+' days | '+(selectedTour.city||selectedTour.country||'')+' | Starting price: '+(selectedTour.price_from?(selectedTour.currency||'USD')+' '+selectedTour.price_from:'confirmed with enquiry')+' | Highlights: '+((selectedTour.itinerary||[]).map(d=>d.title).join(', '))+' | Includes: '+((selectedTour.included||[]).join(', ')):'';const payload={request_type:requestType,tour_type:selectedTour&&requestType==='booking'?selectedTour.title:null,destination:fd.get('destination')||null,start_date:fd.get('start_date')||null,end_date:fd.get('end_date')||null,travelers:fd.get('travelers')?Number(fd.get('travelers')):null,budget:fd.get('budget')||null,travel_style:fd.get('travel_style')||null,name:fd.get('name'),email:fd.get('email')||null,phone:fd.get('phone')||null,contact_method:fd.get('contact_method'),notes:(fd.get('notes')||'')+tourNotes};try{const r=await fetch(SB_URL+'/rest/v1/trip_requests',{method:'POST',headers:{'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY,'Content-Type':'application/json','Prefer':'return=minimal'},body:JSON.stringify(payload)});if(!r.ok)throw new Error(await r.text());form.reset();reqDest.value=selectedTour||'';msg.innerHTML='<div class="request-success"><b>Request received ✓</b>We have your details. The Samarcanda team can now follow up using your chosen contact method.</div>';button.textContent='Request sent'}catch(err){console.error(err);msg.textContent='Something went wrong while sending. Please try again or use the enquiry form again.';button.disabled=false;button.textContent='Send my request →'}});
 </script>
 </body></html>
