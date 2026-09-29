@@ -50,6 +50,47 @@ body{background:var(--cream);color:var(--ink)}
 
 
 .location-btn{margin-top:7px;border:1px solid var(--line);background:color-mix(in srgb,var(--paper) 90%,#d9822b 10%);color:var(--ink);padding:9px 12px;border-radius:10px;font-weight:700;cursor:pointer;font-size:12px}.location-btn:hover{border-color:#d9822b}.location-btn:disabled{opacity:.6;cursor:wait}.location-status{display:block;margin-top:5px;color:var(--muted);font-size:10px;font-weight:400}.departure-badge{display:inline-flex;align-items:center;gap:6px;margin-top:8px;padding:7px 10px;border-radius:999px;background:#d9822b18;color:var(--ink);font-size:11px}
+
+/* Samarcanda lighter visual theme */
+:root[data-theme="light"]{
+  --cream:#fffdf8;--paper:#ffffff;--ink:#30261e;--muted:#756a5e;--line:#eee3d5;--deep:#302015;--bg-main:#fffdf8;
+}
+:root[data-theme="light"] body{background:#fffdf8}
+:root[data-theme="light"] .hero{background:radial-gradient(circle at 78% 18%,#ffdca866,transparent 30%),linear-gradient(135deg,#fffaf1 0%,#fff2df 52%,#f9dfbd 100%);color:#30261e}
+:root[data-theme="light"] .hero:before{border-color:#d9822b18;box-shadow:0 0 0 80px #d9822b08,0 0 0 160px #d9822b04}
+:root[data-theme="light"] .hero .eyebrow{color:#a86120}
+:root[data-theme="light"] .hero h1 em{color:#d9822b}
+:root[data-theme="light"] .hero p{color:#66594d}
+:root[data-theme="light"] .hero-note{color:#75695c}
+:root[data-theme="light"] .hero-note b{color:#30261e}
+:root[data-theme="light"] .top{color:#30261e}
+:root[data-theme="light"] .mark{border-color:#d9822b;color:#d9822b}
+:root[data-theme="light"] .theme-toggle{background:#ffffffcc;color:#6b4a2c;border-color:#dfc7aa}
+:root[data-theme="light"] .nav a:hover{color:#d9822b}
+:root[data-theme="light"] .btn{background:#d9822b;color:#fff;border-color:#d9822b;box-shadow:0 8px 22px #d9822b22}
+:root[data-theme="light"] .btn.alt{background:#ffffff99;color:#6b4a2c;border-color:#d9b98f}
+:root[data-theme="light"] .tours{background:#fff}
+:root[data-theme="light"] .tour{box-shadow:0 8px 30px #8d5b2510}
+:root[data-theme="light"] .tour:hover{box-shadow:0 18px 45px #8d5b2520}
+:root[data-theme="light"] .story{background:#fff6e9}
+:root[data-theme="light"] .story-card{box-shadow:0 8px 30px #8d5b2510}
+:root[data-theme="light"] .story-card.dark{background:linear-gradient(135deg,#fff0d8,#f6d5a8);color:#30261e;border:1px solid #ead4b8}
+:root[data-theme="light"] .story-card.dark p{color:#66594d}
+:root[data-theme="light"] .map-section{background:#fffaf2;color:#30261e}
+:root[data-theme="light"] .map-head p{color:#756a5e}
+:root[data-theme="light"] .map{background:radial-gradient(circle at 50% 45%,#ffffff 0,#fff8ed 70%,#f5e8d5 100%);border-color:#eadcc9;box-shadow:0 20px 60px #8d5b2512}
+:root[data-theme="light"] .map-search input{background:#ffffffee;color:#30261e;border-color:#dfcdb6}
+:root[data-theme="light"] .map-panel{background:#fffffff2;color:#30261e;border-color:#eadcc9;box-shadow:0 15px 45px #8d5b2518}
+:root[data-theme="light"] .map-panel p{color:#756a5e}
+:root[data-theme="light"] .map-tools button{background:#ffffffee;color:#4d3b2b;border-color:#dfcdb6}
+:root[data-theme="light"] .map-attribution{background:#fffdf9dd}
+:root[data-theme="light"] .destination{background:#ffffff;border-color:#eadcc9;color:#66594d}
+:root[data-theme="light"] .destination b{color:#30261e}
+:root[data-theme="light"] .map-note{color:#8a7a68}
+:root[data-theme="light"] .cta{background:#fff3e2;color:#30261e;border-top:1px solid #f0ddc3}
+:root[data-theme="light"] .cta p{color:#756a5e}
+:root[data-theme="light"] .socials a{border-color:#dfcdb6;color:#5e4936}
+:root[data-theme="light"] .footer{background:#fffaf3;color:#8a7967;border-top:1px solid #eee1d1}
 </style></head>
 <body>
 <header class="top"><a class="brand" href="#"><span class="mark">S</span><span>Samarcanda</span></a><nav class="nav"><a href="#tours">Tours</a><a href="#map">Explore</a><a href="#story">Why us</a><a href="#contact">Contact</a><button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch theme">☾</button></nav></header>
